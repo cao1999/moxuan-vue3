@@ -1,13 +1,16 @@
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from "./components/HelloWorld.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <HelloWorld />
+  <button class="button">hello world</button>
 </template>
 
-<style>
-
+<style lang="scss">
+.button {
+  width: 100px;
+  height: 80px;
+  background-color: #eee;
+  border: none;
+  outline: none;
+  color: rgba(0, 0, 0, 0.5);
+}
 </style>
