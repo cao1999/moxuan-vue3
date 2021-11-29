@@ -1,7 +1,11 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>123</div>
+  <div class="button">123</div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+.button {
+  color: red;
+}
+</style>

@@ -1,10 +1,18 @@
 # moxuan-vue3
 
+> 写这个库的目的：**练习开发复杂组件的能力，并不是为了发布到 npm 上获取 start 等**
+
 ## 技术栈
 
-[参考](https://vueschool.io/articles/vuejs-tutorials/eslint-and-prettier-with-vite-and-vue-js-3/)
+[vue3 中文官网](https://v3.cn.vuejs.org/)
 
-**vite** + **vue3** + **typescript** + **代码检查工具**
+[vite 官网](https://vitejs.dev/)
+
+[vitepress 官网](https://vitepress.vuejs.org/)
+
+[参考文章](https://vueschool.io/articles/vuejs-tutorials/eslint-and-prettier-with-vite-and-vue-js-3/)
+
+**vite** + **vue3** + **typescript** + **sass** + **代码检查工具**
 
 代码检查工具包括 eslint、prettier、stylelint、husky、lint-staged 等
 
