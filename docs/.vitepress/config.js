@@ -29,6 +29,7 @@ module.exports = {
           // 配置子菜单
           children: [
             { text: "Button", link: "/components/button/" },
+            { text: "Progress", link: "/components/progress/" },
             { text: "Scrollbar", link: "/components/scroll-bar/" },
           ],
         },

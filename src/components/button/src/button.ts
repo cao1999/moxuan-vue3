@@ -6,8 +6,7 @@ export interface ButtonProps {
 }
 
 export interface BtnSizeMap {
-  [small: string]: string;
-  large: string;
+  [props: string]: string;
 }
 
 export const BTN_TYPE: string[] = ["primary", "danger"];

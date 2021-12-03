@@ -1,5 +1,10 @@
 <template>
-  <button type="button" :class="classComputed" :disabled="props.disabled">
+  <button
+    @click="handleClick"
+    type="button"
+    :class="classComputed"
+    :disabled="props.disabled"
+  >
     <slot></slot>
   </button>
 </template>
@@ -7,7 +12,7 @@
 <script setup lang="ts">
 import { defineProps, defineEmits, withDefaults, computed } from "vue";
 import { createClass } from "../../_utils";
-import { BTN_TYPE, BTN_SIZE_MAP } from "./index";
+import { BTN_TYPE, BTN_SIZE_MAP } from "./button";
 
 // 创建局部类名前缀
 const baseClass = createClass("btn");
@@ -26,9 +31,8 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   disabled: false,
 });
 
+// 注册事件
 const emit = defineEmits(["click"]);
-
-console.log(emit, "emit");
 
 // 监听属性变化，动态修改class
 const classComputed = computed(() => {
@@ -42,8 +46,13 @@ const classComputed = computed(() => {
 
   return className;
 });
+
+//按钮点击
+const handleClick = (e: MouseEvent) => {
+  emit("click", e);
+};
 </script>
 
 <style lang="scss">
-@import "../style/index.scss";
+@import "../style/button.scss";
 </style>

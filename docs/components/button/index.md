@@ -6,7 +6,7 @@
   import Button from "../../../src/components/button/index.ts"
 
 const foo = function (e) {
-  console.log(button789)
+  console.log(e, 'button')
 }
 
 </script>
@@ -27,14 +27,18 @@ const foo = function (e) {
 ```vue
 <template>
   <section class="component-button">
-    <Button type="default">button</Button>
+    <Button @click="foo" type="default">button</Button>
     <Button type="primary">button</Button>
     <Button type="danger">button</Button>
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Button from "../../../src/components/button/index.ts";
+
+const foo = function (e) {
+  console.log(e, "button");
+};
 </script>
 
 <style lang="scss">
