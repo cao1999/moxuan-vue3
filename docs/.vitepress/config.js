@@ -12,7 +12,7 @@ module.exports = {
     // 顶部菜单栏
     nav: [
       { text: "指南", link: "/guide/" },
-      { text: "组件", link: "/components/" },
+      { text: "组件", link: "/components/button/" },
       { text: "关于", link: "/about/" },
       { text: "github", link: "https://github.com/cao1999/advanced-js" },
     ],

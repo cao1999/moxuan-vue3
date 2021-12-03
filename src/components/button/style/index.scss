@@ -1,0 +1,97 @@
+@import "../../style/index.scss";
+
+/* 定义button组件的类名前缀 */
+$button-prefix: #{$mox-prefix}-btn;
+
+@mixin btnColor($btn-font-color, $btn-bg-color, $btn-border-color) {
+  color: $btn-font-color;
+  background-color: $btn-bg-color;
+  border-color: $btn-border-color;
+}
+
+/* 按钮基础样式 */
+.#{$button-prefix} {
+  height: $btn-height-base;
+  padding: $btn-padding-base;
+  color: $btn-default-color;
+  text-align: center;
+  font-size: $btn-font-size-base;
+  border: $btn-border-width solid $btn-default-border;
+  border-radius: $btn-radius-base;
+  background-color: $btn-default-bg;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+
+  /* 按钮禁用状态 */
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: $btn-disabled-opacity;
+
+    &:hover {
+      color: $btn-default-color;
+      border-color: $btn-default-border;
+    }
+  }
+
+  &:hover {
+    color: $primary-color;
+    border-color: $primary-color;
+  }
+}
+
+/* primary */
+.#{$button-prefix}-primary {
+  @include btnColor($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+
+  /* 为每个type的按钮设置disabled的样式 */
+  &[disabled] {
+    &:hover {
+      @include btnColor(
+        $btn-primary-color,
+        $btn-primary-bg,
+        $btn-primary-border
+      );
+    }
+  }
+
+  &:hover {
+    @include btnColor(
+      $btn-primary-color,
+      $btn-primary-hover,
+      $btn-primary-hover
+    );
+  }
+}
+
+/* danger */
+.#{$button-prefix}-danger {
+  @include btnColor($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+
+  &[disabled] {
+    &:hover {
+      @include btnColor($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+    }
+  }
+
+  &:hover {
+    @include btnColor($btn-danger-color, $btn-danger-hover, $btn-danger-hover);
+  }
+}
+
+/* small TODO: 看看能不能创建一个函数 */
+.#{$button-prefix}-sm {
+  height: $btn-height-sm;
+  padding: $btn-padding-sm;
+  font-size: $btn-font-size-sm;
+  border-radius: $btn-radius-sm;
+}
+
+/* large */
+.#{$button-prefix}-lg {
+  height: $btn-height-lg;
+  padding: $btn-padding-lg;
+  font-size: $btn-font-size-lg;
+  border-radius: $btn-radius-lg;
+}

@@ -1,0 +1,29 @@
+/* 学习使用scss */
+
+// 定义变量
+$color: #fff;
+
+// 定义一个css代码块，可以传参
+@mixin theme($theme) {
+  background-color: $theme;
+}
+
+.color {
+  @include theme(#fff);
+}
+
+// 定义extend
+%common-style {
+  font-size: 14px;
+}
+
+.font-12px {
+  @extend %common-style;
+}
+
+.font-14px {
+  @extend %common-style;
+}
+
+// 使用数学操作符
+@use "scss:math";

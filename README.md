@@ -8,7 +8,13 @@
 
 [vite 官网](https://vitejs.dev/)
 
+[typescript 中文官网](https://www.tslang.cn/docs/handbook/basic-types.html)
+
+[sass](https://sass-lang.com/guide)
+
 [vitepress 官网](https://vitepress.vuejs.org/)
+
+[vue 参考文章](https://segmentfault.com/a/1190000039680245)
 
 [参考文章](https://vueschool.io/articles/vuejs-tutorials/eslint-and-prettier-with-vite-and-vue-js-3/)
 
@@ -46,3 +52,11 @@ vite.config.ts # vite配置文件
 ## 遇到的问题
 
 1. 在安装`stylelint`时需要降低一个版本，否则在解析`vue`文件时会报错
+2. 目前只能在当前 vue 文件创建 interface，如果引入外部的 interface，defineProps 会报 literal 错
+3. 引入样式文件时使用`@import url()`会报错，不使用`url()`就不报错
+
+## 学到的知识
+
+### CSS
+
+1. 使用**属性选择器**
