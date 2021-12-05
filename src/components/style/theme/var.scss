@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "../color/color.scss";
 
 /* prefix */
@@ -86,3 +87,24 @@ $progress-height: 8px;
 $progress-radius: 100px;
 $progress-info-width: 3em;
 $progress-info-margin-left: 0.5em;
+
+// switch
+$switch-unChecked-bg: #ccc;
+$switch-checked-bg: $primary-color;
+$switch-disabled-bg: #eee;
+$switch-handle-bg: $white;
+
+$switch-width-base: 44px;
+$switch-width-sm: 28px;
+$switch-width-lg: 50px;
+
+$switch-height-base: 22px;
+$switch-height-sm: 16px;
+$switch-height-lg: 28px;
+
+$switch-handle-width-base: $switch-height-base - 4px;
+$switch-handle-width-sm: $switch-height-sm - 2px;
+$switch-handle-width-lg: $switch-height-lg - 6px;
+
+$switch-radius: 100px;
+$switch-transition: all 0.2s;

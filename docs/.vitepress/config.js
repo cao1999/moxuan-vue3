@@ -30,6 +30,7 @@ module.exports = {
           children: [
             { text: "Button", link: "/components/button/" },
             { text: "Progress", link: "/components/progress/" },
+            { text: "Switch", link: "/components/switch/" },
             { text: "Scrollbar", link: "/components/scroll-bar/" },
           ],
         },

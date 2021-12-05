@@ -1,0 +1,72 @@
+@use "sass:math";
+@import "../../style/index.scss";
+
+$switch-prefix: #{$mox-prefix}-switch;
+
+.#{$switch-prefix} {
+  position: relative;
+  /* 设置最小宽度是因为按钮内部可能会有文字，自动撑开 */
+  min-width: $switch-width-base;
+  height: $switch-height-base;
+  background-color: $switch-unChecked-bg;
+  border-radius: $switch-radius;
+
+  &-handle {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    width: $switch-handle-width-base;
+    height: $switch-handle-width-base;
+    transform: translateY(-50%);
+    background-color: $switch-handle-bg;
+    border-radius: 50%;
+    transition: $switch-transition;
+  }
+
+  &-checked {
+    background-color: $switch-checked-bg;
+
+    .#{$switch-prefix}-handle {
+      left: calc(100% - 20px);
+    }
+  }
+
+  &-disabled {
+    background-color: $switch-disabled-bg;
+    cursor: not-allowed;
+  }
+
+  &-sm {
+    min-width: $switch-width-sm;
+    height: $switch-height-sm;
+
+    .#{$switch-prefix}-handle {
+      left: 1px;
+      width: $switch-handle-width-sm;
+      height: $switch-handle-width-sm;
+    }
+
+    &.#{$switch-prefix}-checked {
+      .#{$switch-prefix}-handle {
+        left: calc(100% - 15px);
+      }
+    }
+  }
+
+  &-lg {
+    min-width: $switch-width-lg;
+    height: $switch-height-lg;
+
+    .#{$switch-prefix}-handle {
+      left: 3px;
+      width: $switch-handle-width-lg;
+      height: $switch-handle-width-lg;
+    }
+
+    &.#{$switch-prefix}-checked {
+      .#{$switch-prefix}-handle {
+        left: calc(100% - 25px);
+      }
+    }
+  }
+}
